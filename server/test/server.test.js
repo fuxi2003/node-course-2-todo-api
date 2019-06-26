@@ -2,7 +2,7 @@ const express = require('express');
 const request = require('supertest');
 
 const {app} = require('./../server');
-const {Todo} = require('./../models/todo');
+const {Todo} = require('./../model/todo');
 
 beforeEach( (done) => {
   Todo.remove({}).then(()=>done());
