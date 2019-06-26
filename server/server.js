@@ -24,7 +24,7 @@ app.get('./todo',(req,res) => {
     res.send({todos});
     },(err)=> {
       res.status(400).send(err);
-      })
+      });
   })
   app.listen(3000,()=>{
     console.log('started up on port 3000');

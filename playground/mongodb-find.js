@@ -17,5 +17,5 @@ Mongoclient.connection('mongodb://localhost:27017/TodoApp',(err,db)=>{
     db.connection('users').find({name:'ilan'}).toarray().then((docs)=>{
     console.log(JSON.stringify(docs,undefined,2));
     });
-    db.close();
+    //db.close();
 });
