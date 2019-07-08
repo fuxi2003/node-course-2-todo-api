@@ -3,17 +3,26 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test":"mocha Server /**/*.test.js",
-    "test-watch":"nodemon --exec 'npm test'",
-    "start": "node ./bin/www"
+    "start": "node server/server.js",
+    "test": " mocha server /**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
+  },
+  "engines": {
+    "node": "10.13.0"
   },
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "cookie-parser": "~1.4.4",
+    "crypto-js": "^3.1.6",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.15.0",
+    "mongodb": "^3.0.11",
+    "morgan": "~1.9.1",
+    "validator": "^5.6.0"
   },
   "devDependencies": {
     "expect": "^1.20.2",

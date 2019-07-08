@@ -8,27 +8,31 @@ var Todo = mongoose.model('Todo',{
   trim:true
   },
   completed:{
-  type:Boolean
+  type:Boolean,
   default:false
     },
-  completedat:{
+  completedAt:{
   type:Number,
   default:null
+   },
+   _creator: {
+  type: Mongoose.Schema.type.ObjectId,
+  required: true
    }
    });
-module.exports = {todo};
 
-var otherTodo = new Todo({
-  text:'Feed the Cat',
-  completed:true,
-  completedat: 123
-  })
-       otherTodo.save()
-         .then((doc)=> {
-           console.log(JSON.stringify(doc,undefined,2));
-           },(err)=> {
-            console.log('unable to save todo')
-          });
+// var otherTodo = new Todo({
+//   text:'Feed the Cat',
+//   completed:true,
+//   completedAt: 123
+//   })
+//
+//      otherTodo.save()
+//            .then((doc)=> {
+//            console.log(JSON.stringify(doc,undefined,2));
+//            },(err)=> {
+//             console.log('unable to save todo')
+//           });
 // var newTodo = new Todo({
 //   text: ‘cook dinner’
 //   });
@@ -38,3 +42,4 @@ var otherTodo = new Todo({
 //       },(err)=>{
 //         console.log('unable to save todo')
 //         });
+module.exports = {Todo};

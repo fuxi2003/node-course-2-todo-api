@@ -1,6 +1,6 @@
 const{ObjectID} = require('mongodb');
 const{mongoose} = require('./../server/db/mongoose');
-const{Todo} = require('./../server/models/todo');
+const{Todo} = require('./../server/model/todo');
 
 var id = '57bf38394b39c93d2a55e9811';
 
